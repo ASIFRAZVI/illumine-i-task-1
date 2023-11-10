@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header form</title>
+    <link rel="stylesheet" href="foam.css">
+</head>
+<body>
+    <h1>Header information</h1>
+
+    <form id="myForm" action="/createheaderform" method="post">
+        <select id="yard" name="yard" required>
+            <option value="" disabled selected>yard*</option>
+            <option value="HK">HK</option>
+            <option value="AU">AU</option>
+            <option value="OT">OT</option>
+        </select>
+        
+        <select id="customerName" name="customerName" required>
+            <option value="" disabled selected>CustomerName*</option>
+            <option value="JACK">JACK</option>
+            <option value="SAMSON">SAMSON</option>
+            <option value="JOHN">JOHN</option>
+        </select>
+
+     
+        <select id="agent" name="agent" required>
+            <option value="" disabled selected>Agent*</option>
+            <option value="Agent-1">Agent-1</option>
+            <option value="Agent-2">Agent-2</option>
+            <option value="Agent-3">Agent-3</option>
+        </select>
+
+       
+        <input type="number" id="unitNumber" name="unitNumber" required placeholder="UnitNumber*">
+
+       
+        <input type="text" id="usage" name="usage" required placeholder="Usage*">
+
+        <br>
+        <br>
+
+        <input type="text" id="type" name="type" required placeholder="Type*">
+
+        <input type="number" id="size" name="size" required placeholder="Size*">
+
+        <input type="date" id="estimateDate" name="estimateDate" min="2023-11-10"  required placeholder="Estimat Date*">
+
+  
+        <input type="number" id="uom" name="uom" required placeholder="UOM*">
+
+        <br><br>
+
+        <select id="billTo" name="billTo" required>
+            <option value="" disabled selected>Bill to*</option>
+            <option value="JACK">JACK</option>
+            <option value="SAMSON">SAMSON</option>
+            <option value="JOHN">JOHN</option>
+        </select>
+       
+    
+        <select id="lessee" name="lessee" required>
+            <option value="" disabled selected>lessee*</option>
+            <option value="MAERSK">MAERSK</option>
+            <option value="CMACGM">CMACGM</option>
+            <option value="MSI">MSI</option>
+        </select>
+
+        <input type="number" id="amount" name="amount"  required placeholder="amount*" >
+
+        <select id="paymentType" name="paymentType" required>
+            <option value="" disabled selected>Payment type*</option>
+            <option value="Cash">Cash</option>
+            <option value="Online">Online</option>
+        </select>
+
+        <label for="active">Active:</label>
+        <input type="checkbox" id="active" name="active" checked required>
+       
+
+<br><br>
+      
+          <input type="text" id="remark" name="remark"  required placeholder="Remarks*">
+
+          <br><br>
+        <button type="submit">Submit</button>
+    
+    </form>
+    
+    <footer>
+        &copy; 2023 Illumine-i. All rights reserved.
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
