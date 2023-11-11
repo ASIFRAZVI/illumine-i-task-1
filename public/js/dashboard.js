@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const clientList = document.getElementById("clientList");
     const paginationContainer = document.getElementById("pagination");
-    const clientsPerPage = 6; // Number of clients to display per page
-    let currentPage = 1; // Current page
+    const clientsPerPage = 6; 
+    let currentPage = 1; 
 
     // Function to display clients for a specific page
     function displayClients(clients) {
-        clientList.innerHTML = ""; // Clear the current list
+        clientList.innerHTML = ""; 
 
         const startIndex = (currentPage - 1) * clientsPerPage;
         const endIndex = startIndex + clientsPerPage;
@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch('/clientsform')
         .then(response => response.json())
         .then(clients => {
-            // Calculate the total number of pages
             const totalPages = Math.ceil(clients.length / clientsPerPage);
 
             // Generate pagination buttons

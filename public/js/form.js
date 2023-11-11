@@ -47,5 +47,19 @@ usageField.value = '';
 });
 
 
+//Type alphanumeric
+var typeField = document.getElementById('type');
+
+typeField.addEventListener('input', function() {
+
+var alphanumeric = /^[a-zA-Z0-9]*$/;
+
+if (!alphanumeric.test(typeField.value)) {
+alert('Please enter only alphanumeric characters for the "Type" field.');
+
+typeField.value = ''; 
+}
+});
+
 
 

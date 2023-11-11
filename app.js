@@ -8,13 +8,12 @@ const cookieParser = require('cookie-parser');
 
 const port=3000 || process.env.port
 dotenv.config()
-
 const app=express()
 
 //require database
 require('./server/database')
 
-//requiring contact rouit
+//requiring routes
 const frontpagerouter = require('./routes/frontpageroute');
 const formrouter = require('./routes/formroute');
 const adminrouter = require('./routes/adminroute');
